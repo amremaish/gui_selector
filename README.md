@@ -5,3 +5,4 @@ it's a tool that export xml file to virtual bench
 * 
 
 ![alt text](https://i.ibb.co/p4vVJ7c/image.png)
+![alt text](screenshot/demo.gif)
