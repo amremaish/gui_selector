@@ -1,0 +1,15 @@
+<root>
+	<item source="C:\Users\Amr\Documents\NetBeansProjects\gui_selector\data\image\cap_touch.png" compName="Touch" VBenchName="Touch">
+		<Name type = "string" VBenchName="text" > </Name>
+		<FactNumber type = "integer" VBenchName="fact_number" > </FactNumber>
+	</item>
+	<item source="C:\Users\Amr\Documents\NetBeansProjects\gui_selector\data\image\knob.png" compName="Knob" VBenchName="Knob">
+		<Name type = "string" VBenchName="name" > </Name>
+	</item>
+	<item source="C:\Users\Amr\Documents\NetBeansProjects\gui_selector\data\image\LCD.png" compName="LCD" VBenchName="LCD">
+		<Name type = "string" VBenchName="name" > </Name>
+	</item>
+	<item source="C:\Users\Amr\Documents\NetBeansProjects\gui_selector\data\image\led-light.png" compName="led" VBenchName="led">
+		<Name type = "string" VBenchName="name" > </Name>
+	</item>
+</root>

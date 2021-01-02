@@ -1,0 +1,105 @@
+<Window xmlns:my21="clr-namespace:VirtualBench.Sources.CustomControls.Generic.Oscilloscope.Core"  x:Class="VirtualBench.Framework.VirtualBenchMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Virtual Bench"
+    Loaded="Window_Loaded" Closing="Window_Closing"  ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen" xmlns:my="clr-namespace:VirtualBench.Framework"  xmlns:my2="clr-namespace:WpfGauge;assembly=WpfGauge" xmlns:my3="clr-namespace:CircularGauge;assembly=CircularGauge" xmlns:my4="clr-namespace:VirtualBench.Sources.CustomControls.HMI.LED.Core" xmlns:my5="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.Stepper.Core" xmlns:my6="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.DCMotor.Core" xmlns:my7="clr-namespace:VirtualBench.Sources.CustomControls.Sensors.AnalogInput.Core" xmlns:my8="clr-namespace:VirtualBench.Sources.CustomControls.HMI.Encoder.Core" xmlns:my9="clr-namespace:VirtualBench.Sources.CustomControls.HMI.PWM_Viewer.Core" Unloaded="Window_Unloaded" Closed="Window_Closed" WindowStyle="SingleBorderWindow" xmlns:my10="clr-namespace:VirtualBench.Sources.CustomControls.HMI.Touch.Core" xmlns:my11="clr-namespace:VirtualBench.Sources.CustomControls.HMI.TFT.Core"
+        xmlns:VBLed="clr-namespace:VirtualBench.Sources.CustomControls.HMI.LED.Core" xmlns:my1="clr-namespace:VirtualBench.Sources.CustomControls.Generic.Switch.Core" xmlns:my12="clr-namespace:VirtualBench.Sources.CustomControls.Sensors.Potentiometer.Core" xmlns:my13="clr-namespace:VirtualBench.Sources.CustomControls.HMI.DOWD.Core" xmlns:my14="clr-namespace:VirtualBench.Sources.CustomControls.HMI.EncoderGrayCode.Core" xmlns:my15="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.Relay.Core" xmlns:my16="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.Compressor.Core" xmlns:my17="clr-namespace:VirtualBench.Sources.CustomControls.Generic.Variants.Core" xmlns:my18="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.Haptic.Core" xmlns:my19="clr-namespace:VirtualBench.Sources.CustomControls.Common" xmlns:my20="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.Fan.Core" DataContext="{Binding ElementName=dOWD1}" Name="VBMainWindow" xmlns:my22="clr-namespace:VirtualBench.Sources.CustomControls.Actuators.Blower.Core" xmlns:my23="clr-namespace:VirtualBench.Sources.CustomControls.Generic.EEPROM.Core" xmlns:my24="clr-namespace:VirtualBench.Sources.CustomControls.HMI.LCD.Core" xmlns:my25="clr-namespace:VirtualBench.Sources.CustomControls.HMI.HUDImage.Core" xmlns:my26="clr-namespace:VirtualBench.Sources.CustomControls.Custom.HUDImage.Header"
+		MinHeight="0"
+		MaxHeight="750"
+		MaxWidth="1300" 
+		mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		d:DesignHeight="750"
+		d:DesignWidth="1300" 
+		SizeToContent="WidthAndHeight">
+    <Grid Width="1282" Height="712" >
+        <Menu Height="24" Name="menu1" VerticalAlignment="Top">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#00DDDDDD" Offset="0"/>
+                    <GradientStop Color="#AAAAAAAA" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="Main" InputGestureText="" Name="MenuFile" VerticalAlignment="Top">
+                <MenuItem Header="Configuration" Click="MenuItem_Configuration_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Gears.gif"
+                               Width="16"
+                               Height="16"
+                               HorizontalAlignment="Center"
+                               />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Reset Bench" Click="MenuItem_Click_1">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Reload.gif" SnapsToDevicePixels="False" ClipToBounds="False" Stretch="None"  Grid.IsSharedSizeScope="False" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Exit" Click="MenuItem_Click_2">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Close.gif" SnapsToDevicePixels="False" ClipToBounds="False" Stretch="None"  Grid.IsSharedSizeScope="False" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Numerical Converter + Checksum" Click="MenuItem_Click_3">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Hex_Small.png"
+                               Width="16"
+                               Height="16"
+                               HorizontalAlignment="Center"
+                               >
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Stopwatch" Click="MenuItem_Click_4">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Stopwatch.png" 
+                               Width="16"
+                               Height="16"
+                               HorizontalAlignment="Center"
+                               >
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Calculator" Click="MenuItem_Click_5">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Calculator.gif"
+                               Width="16"
+                               Height="16"
+                               HorizontalAlignment="Center"
+                               >
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>|
+            <MenuItem Header="VTP Design" HorizontalAlignment="Stretch" SnapsToDevicePixels="False" VerticalContentAlignment="Top" VerticalAlignment="Top" Click="MenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Width="16" Height="16" Margin="0,0,-8,0" Source="/VirtualBench;component/Resources/Execute.gif" />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <MenuItem Header="Help" VerticalAlignment="Top">
+                <MenuItem Header="About Us" Click="MenuItem_Click_7">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/About_Us.png"
+                               Width="16"
+                               Height="16"
+                               HorizontalAlignment="Center"
+                               >
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="I Found a Bug! :)" Click="MenuItem_Click_6">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Happy_Face.png"
+                               Width="16"
+                               Height="16"
+                               HorizontalAlignment="Center"
+                               >
+                        </Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>

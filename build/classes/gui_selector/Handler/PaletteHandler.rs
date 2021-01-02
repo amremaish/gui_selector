@@ -1,0 +1,11 @@
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$7
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$8
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$5
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$6
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$3
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$4
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$1
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$2
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$10
+com.valeo.stdplatform.wizard.gui_selector.Handler.PaletteHandler$9

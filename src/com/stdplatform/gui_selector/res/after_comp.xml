@@ -1,0 +1,9 @@
+</Grid>
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="White" Offset="0" />
+            <GradientStop Color="#FFB4B4B4" Offset="1" />
+            <GradientStop Color="White" Offset="0" />
+        </RadialGradientBrush>
+    </Window.Background>
+</Window>
